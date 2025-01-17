@@ -1,0 +1,6 @@
+﻿
+
+air_wings = {
+	### Luftstreitkräfte -- Vienna (full air force, consolidated), CR.32 aircraft
+
+}

@@ -1,0 +1,40 @@
+add_namespace = sleepy
+
+news_event = {
+	id = sleepy.1
+	title = "Civil War in Spain"
+	desc = "The fascist government in spain has started a civil war"
+	picture = GFX_news_event_001
+
+	major = yes
+
+	is_triggered_only = yes
+
+	trigger = {}
+
+	option = {
+		name = "How will it end?"
+	}
+
+}
+
+news_event = {
+	id = sleepy.2
+	title = "Asian War"
+	desc = "The Japanese Army invaded China"
+	picture = GFX_news_event_001
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = "The Dragon will be slain"
+	}
+
+	immediate = {
+		hidden_effect = {
+			add_threat = 20
+		}
+	}
+ }

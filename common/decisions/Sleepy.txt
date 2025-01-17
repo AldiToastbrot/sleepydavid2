@@ -1,0 +1,519 @@
+Sleepy_decision = {
+		annex_saf = {
+			icon = generic_operation
+			fire_only_once = yes
+			allowed = { tag = CAN }
+			available = { SAF = { is_ai = yes } date > 1936.1.1}
+			cost = 0
+			complete_effect = {
+				hidden_effect = {
+					CAN = { 
+					add_state_core = 895 add_state_core = 894 add_state_core = 541 add_state_core = 893 
+					add_state_core = 681 add_state_core = 275 add_state_core = 719 } 
+				}
+				annex_country = { target = SAF }
+			}
+		}
+
+		annex_ire = {
+			icon = generic_operation
+			fire_only_once = yes
+			allowed = { tag = ENG }
+			available = { IRE = { is_ai = yes } date > 1938.1.1}
+			cost = 0
+			complete_effect = {
+				hidden_effect = {
+					ENG = { add_state_core = 113 add_state_core = 134 add_state_core = 135 }
+				}
+				annex_country = { target = IRE }		
+			}		
+		}
+
+		annex_nzl = {
+			icon = generic_operation
+			fire_only_once = yes
+			allowed = { tag = AST }
+			available = { NZL = { is_ai = yes } date > 1936.1.1}
+			cost = 0
+			complete_effect = {
+				hidden_effect = {
+					AST = { add_state_core = 726 add_state_core = 284 add_state_core = 723 }
+				}
+				annex_country = { target = NZL }		
+			}		
+		}
+
+		annex_bul = {
+			icon = generic_operation
+			fire_only_once = yes
+			allowed = { tag = ITA }
+			available = { BUL = { is_ai = yes } date > 1938.1.1}
+			cost = 0
+			complete_effect = {
+				hidden_effect = {
+					ITA = { add_state_core = 211 add_state_core = 212 add_state_core = 801 add_state_core = 48 }
+				}
+				annex_country = { target = BUL }		
+			}		
+		}
+
+	fall_blau1 = {
+		icon = generic_operation
+		fire_only_once = yes	
+		allowed = { tag = GER }
+		available = {
+			date > 1942.6.1
+			date < 1942.8.1
+			NOT = { has_idea = GER_barbarossa }
+		}
+		cost = 0
+		complete_effect = {
+			GER = { add_timed_idea = { idea = fall_blau days = 120 } }
+			hidden_effect = {
+				SPR = { add_timed_idea = { idea = fall_blau days = 120 } }
+				HUN = { add_timed_idea = { idea = fall_blau days = 120 } }
+				ROM = { add_timed_idea = { idea = fall_blau days = 120 } }
+				BUL = { add_timed_idea = { idea = fall_blau days = 120 } }
+			}
+		}
+	}
+
+	fall_citadel1 = {
+		icon = generic_operation
+		fire_only_once = yes	
+		allowed = { tag = GER }
+		available = {
+			date > 1943.6.1
+			date < 1943.8.1
+			NOT = { has_idea = fall_blau }
+		}
+		cost = 0
+		complete_effect = {
+			GER = { add_timed_idea = { idea = fall_citadel days = 160 } }
+			hidden_effect = {
+				SPR = { add_timed_idea = { idea = fall_citadel days = 160 } }
+				HUN = { add_timed_idea = { idea = fall_citadel days = 160 } }
+				ROM = { add_timed_idea = { idea = fall_citadel days = 160 } }
+				BUL = { add_timed_idea = { idea = fall_citadel days = 160 } }
+		}
+	}
+}
+
+	winter411 = {
+		icon = generic_operation
+		fire_only_once = yes	
+		allowed = { tag = SOV }
+		available = {
+			date > 1941.11.1
+			date < 1942.1.1
+		}
+		cost = 0
+		complete_effect = {
+			SOV = { add_timed_idea = { idea = winter41 days = 120 } }
+		}
+	}
+
+	winter421 = {
+		icon = generic_operation
+		fire_only_once = yes	
+		allowed = { tag = SOV }
+		available = {
+			date > 1942.11.1
+			date < 1943.1.1
+			NOT = { has_idea = winter41 }
+		}
+		cost = 0
+		complete_effect = {
+			SOV = { add_timed_idea = { idea = winter42 days = 120 } }
+		}
+	}
+
+	winter431 = {
+		icon = generic_operation
+		fire_only_once = yes	
+		allowed = { tag = SOV }
+		available = {
+			date > 1943.11.1
+			date < 1944.1.1
+			NOT = { has_idea = winter42 }
+		}
+		cost = 0
+		complete_effect = {
+			SOV = { add_timed_idea = { idea = winter43 days = 160 } }
+		}
+	}
+
+	send_air_to_ger = {
+	
+		icon = GFX_decision_generic_air
+			
+			allowed = {
+		}
+		
+		available = {} 
+		fire_only_once = no
+		visible = {
+			original_tag = ITA
+			NOT = {has_country_flag = ITA_air_LL}
+		}
+		
+		complete_effect = {
+			activate_mission = send_air_to_ger1 set_country_flag = ITA_air_LL
+		}			
+	}
+	send_air_to_ger1 = {
+	
+		icon = GFX_decision_generic_air
+			
+			allowed = {
+		}
+		
+		available = {NOT = {has_country_flag = ITA_air_LL}} 
+		fire_only_once = no
+		visible = {
+			original_tag = ITA
+			always = yes
+		}
+		days_mission_timeout = 7
+		is_good = yes
+		activation = { always = no	}
+		
+		timeout_effect = {
+			if = { 
+				limit =  { has_country_flag = ITA_air_LL 
+				}
+			air_to_germany = yes
+			activate_mission = send_air_to_ger1
+			}
+		}	
+	}
+	cancel_air_to_ger = {
+	
+		icon = GFX_decision_generic_air
+			
+			allowed = {
+		}
+		
+		available = {always = yes} 
+		fire_only_once = no
+		visible = {
+			original_tag = ITA
+			has_country_flag = ITA_air_LL
+		}
+	
+		complete_effect = {
+			if = { 
+			limit =  { has_country_flag = ITA_air_LL 
+				}
+				clr_country_flag = ITA_air_LL
+			}
+		}	
+	}
+	SPA_PP = {
+
+		icon = generic_operation
+
+		allowed = {
+			
+		}
+
+		available = {
+			SPR = { has_idea = SPA_awaiting_the_rebellion }
+		}
+		fire_only_once = yes
+		visible = {
+			original_tag = SPR
+		}
+
+		complete_effect = {
+			remove_ideas = SPA_awaiting_the_rebellion
+		}
+	}
+
+	UK_NOTANK = {
+
+		icon = generic_operation
+		fire_only_once = yes
+
+		allowed = { tag = ENG }
+
+		available = {
+			date > 1938.3.1
+		FRA = {is_ai = yes}
+		CAN = {is_ai = yes}
+		}
+
+		complete_effect = {
+			add_research_slot = 1
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 1
+				category = armor
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_in_home_area = yes
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+
+			random_owned_controlled_state = {
+				limit = {
+					is_in_home_area = yes
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	UK_AFRICATANK = {
+
+		icon = generic_operation
+		fire_only_once = yes
+
+		allowed = { tag = ENG }
+
+		available = {
+			GER = { controls_state = 19 }
+		FRA = {is_ai = yes}
+		CAN = {is_ai = yes}
+		}
+
+		complete_effect = {
+			capital_scope = {
+				FRA = { transfer_units_fraction = {
+					target = ENG
+					army_ratio = 100
+					stockpile_ratio = 100
+				} }
+			}
+
+			hidden_effect = {
+
+				add_equipment_to_stockpile = {
+					type = medium_tank_chassis_0
+					amount = 2000
+					variant_name = "Medium Mk. II"
+				}
+				set_technology = {
+					mechanised_infantry = 1
+				}
+				add_equipment_to_stockpile = {
+					type = mechanized_equipment
+					amount = 3000
+				}
+			}
+			}
+		}
+	
+
+	UK_build = {
+
+	icon = generic_operation
+
+	allowed = { tag = ENG }
+
+	available = {
+		
+	}
+
+	fire_only_once = yes
+
+	complete_effect = {
+		121 = {
+			limit = {
+				is_in_home_area = yes
+				free_building_slots = {
+					building = arms_factory
+					size > 1
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 20
+			set_state_flag = royal_ordinance_focus_2AF
+		}
+		133 = {
+			limit = {
+				is_in_home_area = yes
+				free_building_slots = {
+					building = arms_factory
+					size > 1
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 20
+			set_state_flag = royal_ordinance_focus_2AF
+		}
+		125 = {
+			limit = {
+				is_in_home_area = yes
+				free_building_slots = {
+					building = arms_factory
+					size > 1
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 20
+			set_state_flag = royal_ordinance_focus_2AF
+		}
+		129 = {
+			limit = {
+				is_in_home_area = yes
+				free_building_slots = {
+					building = arms_factory
+					size > 1
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 20
+			set_state_flag = royal_ordinance_focus_2AF
+		}
+		123 = {
+			limit = {
+				is_in_home_area = yes
+				free_building_slots = {
+					building = arms_factory
+					size > 1
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 20
+			set_state_flag = royal_ordinance_focus_2AF
+		}
+		128 = {
+			limit = {
+				is_in_home_area = yes
+				free_building_slots = {
+					building = arms_factory
+					size > 1
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 20
+			set_state_flag = royal_ordinance_focus_2AF
+		}
+		119 = {
+			limit = {
+				is_in_home_area = yes
+				free_building_slots = {
+					building = arms_factory
+					size > 1
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 20
+			set_state_flag = royal_ordinance_focus_2AF
+		}
+		122 = {
+			limit = {
+				is_in_home_area = yes
+				free_building_slots = {
+					building = arms_factory
+					size > 1
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 20
+			set_state_flag = royal_ordinance_focus_2AF
+		}
+		113 = {
+			limit = {
+				is_in_home_area = yes
+				free_building_slots = {
+					building = arms_factory
+					size > 1
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 20
+			set_state_flag = royal_ordinance_focus_2AF
+		}
+		135 = {
+			limit = {
+				is_in_home_area = yes
+				free_building_slots = {
+					building = arms_factory
+					size > 1
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 20
+			set_state_flag = royal_ordinance_focus_2AF
+		}
+
+	}
+  }
+
+  ROM_OIL = {
+
+	icon = generic_operation
+
+	allowed = {
+		
+	}
+
+	available = {
+		ROM = { is_ai = yes }
+	}
+	fire_only_once = yes
+	visible = {
+		original_tag = GER
+	}
+
+	complete_effect = {
+		add_resource = {
+			type = oil
+			amount = 60
+			state = 64
+		}
+	}
+   }
+   REBUILD_NAVY = {
+
+	icon = generic_operation
+
+	allowed = {
+	}
+
+	available = {
+		date > 1939.9.1
+		naval_strength_ratio = {
+			tag = root
+			ratio = 10
+		}
+	}
+	fire_only_once = yes
+	visible = {
+		original_tag = ITA
+		original_tag = ENG
+	}
+
+	complete_effect = {
+		add_timed_idea = {
+			idea = NAVY_output
+			days = 365
+		}
+	}
+   }
+  }

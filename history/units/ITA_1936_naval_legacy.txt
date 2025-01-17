@@ -1,0 +1,14 @@
+﻿##### NAVAL UNITS #####
+units = {
+	### ITALY ###
+	fleet = {
+		name = "Comando Navale Ionio e Basso Adriatico"
+		naval_base = 11837 # Taranto, Italy
+
+		task_force = {
+			name = "I Squadra Navale" # Dipartimento Militare Marittimo 'Ionio e Basso Adriatico' / I Squadra
+			location = 11837 # Taranto, Italy
+			ship = { name = "RN Caio Duilio" pride_of_the_fleet = yes definition = battleship equipment = { battleship_1 = { amount = 1 owner = ITA } } }
+		}
+	}
+}

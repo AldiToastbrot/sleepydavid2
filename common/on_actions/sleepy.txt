@@ -1,0 +1,214 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			if = {
+				limit = { date = 1936.1.2 }
+				SWE = { annex_country = {
+					target = JAP
+				} }
+				SWE = { annex_country = {
+					target = MEX
+				} }
+				SWE = { annex_country = {
+					target = BRA
+				} }
+				SWE = { annex_country = {
+					target = TUR
+				} }
+			}
+		}
+	}
+ on_startup = {
+	effect = {
+		every_country = {
+			add_ideas = peace_time_training
+			ITA = {add_ideas = no_barb}
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 1.0
+			}
+	  }
+	}
+  }
+  on_startup = {
+	effect = {
+		TUR = {
+			add_ideas = no_ai
+		}
+		SWE = {
+			add_ideas = no_ai
+		}
+		CZE = {
+			add_ideas = no_ai
+		}
+		AUS = {
+			add_ideas = no_ai
+		}
+		YUG = {
+			add_ideas = no_ai
+		}
+		GRE = {
+			add_ideas = no_ai
+		}
+		ALB = {
+			add_ideas = no_ai
+		}
+		POR = {
+			add_ideas = no_ai
+		}
+		LIT = {
+			add_ideas = no_ai
+		}
+		EST = {
+			add_ideas = no_ai
+		}
+		LAT = {
+			add_ideas = no_ai
+		}
+		POL = {
+			add_ideas = no_ai1
+		}
+		BEL = {
+			add_ideas = no_ai1
+		}
+		HOL = {
+			add_ideas = no_ai1
+		}
+		LUX = {
+			add_ideas = no_ai1
+		}
+		SOV = {
+			add_ideas = sov_noair
+		}
+		GER = {
+			add_ideas = AXIS_air
+		}
+		ITA = {
+			add_ideas = AXIS_air
+		}
+	}
+  }
+  on_capitulation = {
+	effect = {
+		if = {
+			limit = { original_tag = HOL }
+			every_state = {
+				limit = {
+					AND = {
+						is_core_of = HOL
+						is_controlled_by = GER
+					}
+				}
+				add_compliance = 50
+			}
+	    }
+
+		if = {
+			limit = { original_tag = BEL }
+			every_state = {
+				limit = {
+					AND = {
+						is_core_of = BEL
+						is_controlled_by = GER
+					}
+				}
+				add_compliance = 50
+			}
+		}
+
+		if = {
+			limit = {
+				original_tag = DEN
+			}
+			every_state = {
+				limit = {
+					AND = {
+						is_core_of = DEN
+						is_controlled_by = GER
+					}
+				}
+				add_compliance = 50 
+			}
+		}
+
+		if = {
+			limit = { 
+			original_tag = POL
+			}
+			every_state = {
+				limit = {
+					AND = {
+						is_core_of = POL
+						is_controlled_by = GER
+					}
+				}
+				add_compliance = 70 
+			}
+		}
+	}
+  }
+}
+
+
+on_actions = {
+	on_startup = {
+	effect = {
+	every_country = {army_experience = 10 navy_experience = 10 air_experience = 10}
+    GER = { add_timed_idea = {
+		idea = no_trade 
+		days = 1277
+	} }
+	ITA = { add_timed_idea = {
+		idea = no_trade 
+		days = 1277
+	} }
+	HUN = { add_timed_idea = {
+		idea = no_trade 
+		days = 1277
+	} }
+	ROM = { add_timed_idea = {
+		idea = no_trade 
+		days = 1277
+	} }
+	BUL = { add_timed_idea = {
+		idea = no_trade 
+		days = 1277
+	} }
+	FIN = { add_timed_idea = {
+		idea = no_trade 
+		days = 1277
+	} }
+	SPR = { add_timed_idea = {
+		idea = no_trade 
+		days = 1277
+	} }
+	ITA = { add_timed_idea = {
+		idea = NAVY_output
+		days = 1300
+	} }
+	ENG = { add_timed_idea = {
+		idea = NAVY_output
+		days = 1300
+	} }
+	  }
+	}
+  }
+
+  ############
+  # NO ASIA
+  ############
+
+  on_action = {
+	on_startup = {
+		effect = {
+		if = {
+		limit = {
+						date = 1936.1.2 }
+					ENG = {add_ideas = eng_no_asia}
+		}
+	  }	
+	}
+}
+
+
+

@@ -1,0 +1,13 @@
+﻿units = {
+	##### NAVAL UNITS #####
+	### HOME COMMAND ###
+	fleet = {
+		name = "Home Command"
+		naval_base = 11064 # Scapa Flow
+		task_force = {
+			name = "Home Fleet"
+			location = 11064 # Scapa Flow
+			ship = { name = "HMS Hood" pride_of_the_fleet = yes definition = battle_cruiser equipment = { battle_cruiser_1 = { amount = 1 owner = ENG version_name = "Admiral Class" } } }
+		}
+	}
+}

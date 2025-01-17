@@ -1,0 +1,19 @@
+#on_action = {
+#	on_startup = {
+#		effect = {
+#		if = {
+#		limit = {
+#						date = 1936.1.2 }
+#					ENG = {add_ideas = eng_no_asia}
+#		}
+#	  }	
+#	}
+#	on_startup = {
+#		effect = {
+#			if = {
+#				limit = { date = 1936.1.2 }
+#				JAP = { add_ideas = no_ai }
+#			}
+#		}
+#	}
+#}

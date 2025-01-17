@@ -1,0 +1,44 @@
+focus_tree = {
+	id = sweden_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = SWE
+			has_dlc = "Arms Against Tyranny"
+		}
+	}
+	
+	default = no
+
+	continuous_focus_position = { x = 50 y = 2500 }
+	shared_focus = NORDIC_form_joint_alliance
+
+	continuous_focus_position = { x = 20 y = 1000 }  
+	initial_show_position = {
+		x = 37
+		y = 0
+	}
+
+	focus = {
+		id = SWE_NOASIA
+		icon = GFX_goal_fortify_the_westwall
+
+		x = 0
+		y = 0
+
+		cost = 115
+		available = {
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL FOCUS_FILTER_RESEARCH FOCUS_FILTER_MILITARY_CHARACTER }
+
+		completion_reward = {
+			add_threat = 25
+		}
+	}
+
+}
+

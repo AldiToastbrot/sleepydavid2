@@ -1,0 +1,342 @@
+ideas = {
+	country = {
+ peace_time_training = {
+   allowed = { always = yes }
+   visible = { always = yes }
+   cancel = { has_war = yes }
+
+    picture = generic_infantry_bonus
+    removal_cost = -1 
+
+    modifier = {
+		training_time_army_factor = -0.89
+		air_training_xp_gain_factor = 10
+		experience_gain_navy_unit_factor = 10
+		experience_gain_army = 0.5
+		army_fuel_consumption_factor = -0.9
+		air_fuel_consumption_factor = -0.9
+		navy_fuel_consumption_factor = -0.9
+		mobilization_speed = 2
+		air_accidents = -1
+    }
+   }
+ }
+   country = {
+	sov_noair = {
+		picture = generic_production_bonus
+		removal_cost = -1
+		
+		allowed = {
+			original_tag = SOV
+		}
+		modifier = {
+			
+		army_attack_factor = 0.10
+		army_defence_factor = 0.10
+		breakthrough_factor = 0.15
+		cas_damage_reduction = 0.15
+		}
+	
+		equipment_bonus = {
+			small_plane_airframe = {
+				build_cost_ic = +2  instant = yes
+			}
+			cv_small_plane_airframe = {
+				build_cost_ic = +2  instant = yes
+			}
+		}
+		equipment_bonus = {
+			armor = {
+				build_cost_ic = +0.2
+			}
+			medium_tank_chassis = {
+				build_cost_ic = +0.2
+			}
+		}
+	}
+	no_trade = {
+		picture = civilian_economy 
+		allowed = {
+			always = no
+		}
+		removal_cost = -1	
+		modifier = { 
+			production_lack_of_resource_penalty_factor = -1 
+			min_export = -1
+		}		
+	}
+
+	no_ai = {
+		picture = generic_production_bonus
+		removal_cost = -1
+		
+		allowed = {
+			always = yes
+		}
+
+		rule = {
+			can_not_declare_war = yes
+			can_join_factions = no
+		}
+
+		modifier = {
+		consumer_goods_factor = +3.0
+		industrial_capacity_factory = -3.0
+		industrial_capacity_dockyard = -3.0
+		production_factory_max_efficiency_factor = -3.0
+		political_power_factor = -3.0
+		}
+     }
+
+	 no_ai1 = {
+		picture = generic_production_bonus
+		removal_cost = -1
+		
+		allowed = {
+			always = yes
+		}
+
+		rule = {
+			can_not_declare_war = yes
+		}
+
+		modifier = {
+		consumer_goods_factor = +3.0
+		industrial_capacity_factory = -3.0
+		industrial_capacity_dockyard = -3.0
+		production_factory_max_efficiency_factor = -3.0
+		political_power_factor = -3.0
+		}
+     }
+
+	 fall_blau = {
+		picture = generic_acquire_tanks
+		removal_cost = -1
+
+		allowed = {
+			always = yes
+		}
+
+		modifier = {
+			supply_consumption_factor = -0.10
+		}
+
+		targeted_modifier = {
+			tag = SOV
+			attack_bonus_against = 0.10
+			defense_bonus_against = 0.10
+		}
+	 }
+
+	 fall_citadel = {
+		picture = generic_acquire_tanks
+		removal_cost = -1
+
+		allowed = {
+			always = yes
+		}
+
+		modifier = {
+			supply_consumption_factor = -0.10
+		}
+
+		targeted_modifier = {
+			tag = SOV
+			attack_bonus_against = 0.10
+			defense_bonus_against = 0.10
+		}
+	 }
+
+	 winter41 = {
+		picture = generic_acquire_tanks
+		removal_cost = -1
+
+		allowed = {
+			always = yes
+		}
+
+		modifier = {
+			army_attack_factor = 0.10
+			army_defence_factor = 0.10
+		}
+
+	 }
+
+	 winter42 = {
+		picture = generic_acquire_tanks
+		removal_cost = -1
+
+		allowed = {
+			always = yes
+		}
+
+		modifier = {
+			supply_consumption_factor = -0.10
+			army_attack_factor = 0.10
+			army_defence_factor = 0.10
+		}
+
+	 }
+
+	 winter43 = {
+		picture = generic_acquire_tanks
+		removal_cost = -1
+
+		allowed = {
+			always = yes
+		}
+
+		modifier = {
+			supply_consumption_factor = -0.10
+			army_attack_factor = 0.10
+			army_defence_factor = 0.10
+		}
+
+	 }
+
+	 sov_infe = {
+		picture = generic_infantry_bonus
+		removal_cost = -1
+
+		allowed = {
+			always = yes
+		}
+
+		equipment_bonus = {
+			infantry_equipment = {
+				build_cost_ic = -0.05
+			}
+		}
+	 }
+
+	 sov_defe = {
+		picture = generic_production_bonus
+		removal_cost = -1
+
+		allowed = {
+			always = yes
+		}
+
+		modifier = {
+			army_core_defence_factor = 0.05
+		}
+	 }
+
+	 sov_co = {
+		picture = generic_infantry_bonus
+		removal_cost = -1
+
+		allowed = {
+			always = yes
+		}
+
+		modifier = {
+			recruitable_population = 0.05
+			attrition = -0.05
+		}
+	 }
+
+	 sov_coredef = {
+		picture = generic_production_bonus
+		removal_cost = -1
+
+		allowed = {
+			always = yes
+		}
+
+		modifier = {
+			army_core_attack_factor = 0.05
+			army_core_defence_factor = 0.1
+			breakthrough_factor = 0.1
+		}
+	 }
+
+	 sov_laststand = {
+		picture = generic_production_bonus
+		removal_cost = -1
+
+		allowed = {
+			always = yes
+		}
+
+		modifier = {
+			army_core_attack_factor = 0.10
+			army_core_defence_factor = 0.2
+			dig_in_speed = 25
+			supply_consumption_factor = -0.1
+			recruitable_population = 0.1
+		}
+	 }
+
+	 ast_man = {
+		picture = generic_infantry_bonus
+		removal_cost = -1
+
+		allowed = {
+			always = yes
+		}
+
+		modifier = {
+			recruitable_population_factor = 0.1
+		}
+	 }
+
+	 SPA_vole = {
+		picture = volunteer_only
+		removal_cost = -1
+		allowed = {
+			always = yes
+		}
+
+		rule = {
+			can_join_factions = no
+			can_send_volunteers = yes
+		}
+
+		modifier = {
+			send_volunteer_divisions_required = -100
+			send_volunteers_tension = -10
+			send_volunteer_factor = 9
+			
+		}
+	 }
+
+	 AXIS_air = {
+		picture = generic_air_bonus
+		removal_cost = -1
+		allowed = {
+			always = yes
+		}
+
+		equipment_bonus = {
+			small_plane_airframe = {
+				build_cost_ic = -0.075  instant = yes
+			}
+		}
+	 }
+
+	 SPA_MIL = {
+		picture = generic_production_bonus
+		removal_cost = -1
+		allowed = {
+			always = yes
+		}
+
+		modifier = {
+			production_speed_arms_factory_factor = -0.1
+		}
+	 }
+
+	 NAVY_output = {
+		picture = generic_navy_bonus
+		removal_cost = -1
+		allowed = {
+			always = yes
+		}
+		modifier = {
+			industrial_capacity_dockyard = 1.5
+		}
+	 }
+
+   }
+}

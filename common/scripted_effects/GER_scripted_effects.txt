@@ -988,7 +988,7 @@ GER_pay_back_mefo_bills = { #TODO_Danne see if this can be simplified!
 			check_variable = { var = GER_mefo_bill_counter value = 15 compare = less_than }
 		}
 		add_political_power = -20
-		add_timed_idea = { idea = GER_mefo_bills_ended days = 60 }
+		add_timed_idea = { idea = GER_mefo_bills_ended days = 120 }
 	}
 	#2
 	else_if = {
@@ -996,7 +996,7 @@ GER_pay_back_mefo_bills = { #TODO_Danne see if this can be simplified!
 			check_variable = { var = GER_mefo_bill_counter value = 20 compare = equals }
 		}
 		add_political_power = -40
-		add_timed_idea = { idea = GER_mefo_bills_ended days = 80 }
+		add_timed_idea = { idea = GER_mefo_bills_ended days = 160 }
 	}
 	#3
 	else_if = {
@@ -1004,7 +1004,7 @@ GER_pay_back_mefo_bills = { #TODO_Danne see if this can be simplified!
 			check_variable = { var = GER_mefo_bill_counter value = 30 compare = equals }
 		}
 		add_political_power = -60
-		add_timed_idea = { idea = GER_mefo_bills_ended days = 100 }
+		add_timed_idea = { idea = GER_mefo_bills_ended days = 200 }
 	}
 	#4
 	else_if = {
@@ -1012,7 +1012,7 @@ GER_pay_back_mefo_bills = { #TODO_Danne see if this can be simplified!
 			check_variable = { var = GER_mefo_bill_counter value = 40 compare = equals }
 		}
 		add_political_power = -80
-		add_timed_idea = { idea = GER_mefo_bills_ended days = 120 }
+		add_timed_idea = { idea = GER_mefo_bills_ended days = 240 }
 	}
 	#5
 	else_if = {
@@ -1020,7 +1020,7 @@ GER_pay_back_mefo_bills = { #TODO_Danne see if this can be simplified!
 			check_variable = { var = GER_mefo_bill_counter value = 50 compare = equals }
 		}
 		add_political_power = -100
-		add_timed_idea = { idea = GER_mefo_bills_ended days = 140 }
+		add_timed_idea = { idea = GER_mefo_bills_ended days = 280 }
 	}
 	#6
 	else_if = {
@@ -1028,7 +1028,7 @@ GER_pay_back_mefo_bills = { #TODO_Danne see if this can be simplified!
 			check_variable = { var = GER_mefo_bill_counter value = 60 compare = equals }
 		}
 		add_political_power = -120
-		add_timed_idea = { idea = GER_mefo_bills_ended days = 160 }
+		add_timed_idea = { idea = GER_mefo_bills_ended days = 320 }
 	}
 	#7
 	else_if = {
@@ -1036,7 +1036,7 @@ GER_pay_back_mefo_bills = { #TODO_Danne see if this can be simplified!
 			check_variable = { var = GER_mefo_bill_counter value = 70 compare = equals }
 		}
 		add_political_power = -140
-		add_timed_idea = { idea = GER_mefo_bills_ended days = 180 }
+		add_timed_idea = { idea = GER_mefo_bills_ended days = 340 }
 	}
 	#8
 	else_if = {
@@ -1044,7 +1044,7 @@ GER_pay_back_mefo_bills = { #TODO_Danne see if this can be simplified!
 			check_variable = { var = GER_mefo_bill_counter value = 80 compare = equals }
 		}
 		add_political_power = -160
-		add_timed_idea = { idea = GER_mefo_bills_ended days = 200 }
+		add_timed_idea = { idea = GER_mefo_bills_ended days = 400 }
 	}
 	#9
 	else_if = {
@@ -1052,7 +1052,7 @@ GER_pay_back_mefo_bills = { #TODO_Danne see if this can be simplified!
 			check_variable = { var = GER_mefo_bill_counter value = 90 compare = equals }
 		}
 		add_political_power = -180
-		add_timed_idea = { idea = GER_mefo_bills_ended days = 220 }
+		add_timed_idea = { idea = GER_mefo_bills_ended days = 440 }
 	}
 	#10
 	else_if = {
@@ -1060,7 +1060,7 @@ GER_pay_back_mefo_bills = { #TODO_Danne see if this can be simplified!
 			check_variable = { var = GER_mefo_bill_counter value = 100 compare = equals }
 		}
 		add_political_power = -200
-		add_timed_idea = { idea = GER_mefo_bills_ended days = 240 }
+		add_timed_idea = { idea = GER_mefo_bills_ended days = 480 }
 	}
 	#11
 	else_if = {
@@ -1068,7 +1068,7 @@ GER_pay_back_mefo_bills = { #TODO_Danne see if this can be simplified!
 			check_variable = { var = GER_mefo_bill_counter value = 110 compare = equals }
 		}
 		add_political_power = -220
-		add_timed_idea = { idea = GER_mefo_bills_ended days = 260 }
+		add_timed_idea = { idea = GER_mefo_bills_ended days = 520 }
 	}
 	#12
 	else_if = {
@@ -1076,7 +1076,7 @@ GER_pay_back_mefo_bills = { #TODO_Danne see if this can be simplified!
 			check_variable = { var = GER_mefo_bill_counter value = 120 compare = equals }
 		}
 		add_political_power = -240
-		add_timed_idea = { idea = GER_mefo_bills_ended days = 280 }
+		add_timed_idea = { idea = GER_mefo_bills_ended days = 560 }
 	}
 	#13
 	else_if = {
@@ -1084,7 +1084,7 @@ GER_pay_back_mefo_bills = { #TODO_Danne see if this can be simplified!
 			check_variable = { var = GER_mefo_bill_counter value = 130 compare = equals }
 		}
 		add_political_power = -260
-		add_timed_idea = { idea = GER_mefo_bills_ended days = 300 }
+		add_timed_idea = { idea = GER_mefo_bills_ended days = 600 }
 	}
 	#14
 	else_if = {
@@ -1092,7 +1092,7 @@ GER_pay_back_mefo_bills = { #TODO_Danne see if this can be simplified!
 			check_variable = { var = GER_mefo_bill_counter value = 140 compare = equals }
 		}
 		add_political_power = -280
-		add_timed_idea = { idea = GER_mefo_bills_ended days = 320 }
+		add_timed_idea = { idea = GER_mefo_bills_ended days = 640 }
 	}
 	#15
 	else_if = {
@@ -1100,7 +1100,7 @@ GER_pay_back_mefo_bills = { #TODO_Danne see if this can be simplified!
 			check_variable = { var = GER_mefo_bill_counter value = 150 compare = equals }
 		}
 		add_political_power = -300
-		add_timed_idea = { idea = GER_mefo_bills_ended days = 340 }
+		add_timed_idea = { idea = GER_mefo_bills_ended days = 680 }
 	}
 	#16
 	else_if = {
@@ -1108,7 +1108,7 @@ GER_pay_back_mefo_bills = { #TODO_Danne see if this can be simplified!
 			check_variable = { var = GER_mefo_bill_counter value = 160 compare = equals }
 		}
 		add_political_power = -320
-		add_timed_idea = { idea = GER_mefo_bills_ended days = 360 }
+		add_timed_idea = { idea = GER_mefo_bills_ended days = 720 }
 	}
 	#17
 	else_if = {
@@ -1116,7 +1116,7 @@ GER_pay_back_mefo_bills = { #TODO_Danne see if this can be simplified!
 			check_variable = { var = GER_mefo_bill_counter value = 170 compare = equals }
 		}
 		add_political_power = -340
-		add_timed_idea = { idea = GER_mefo_bills_ended days = 380 }
+		add_timed_idea = { idea = GER_mefo_bills_ended days = 760 }
 	}
 	#18
 	else_if = {
@@ -1124,14 +1124,14 @@ GER_pay_back_mefo_bills = { #TODO_Danne see if this can be simplified!
 			check_variable = { var = GER_mefo_bill_counter value = 180 compare = equals }
 		}
 		add_political_power = -360
-		add_timed_idea = { idea = GER_mefo_bills_ended days = 400 }
+		add_timed_idea = { idea = GER_mefo_bills_ended days = 800 }
 	}
 	else_if = {
 		limit = {
 			check_variable = { var = GER_mefo_bill_counter value = 180 compare = greater_than }
 		}
 		add_political_power = -380
-		add_timed_idea = { idea = GER_mefo_bills_ended days = 420 }
+		add_timed_idea = { idea = GER_mefo_bills_ended days = 840 }
 	}
 }
 

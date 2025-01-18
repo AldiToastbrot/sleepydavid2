@@ -341,6 +341,11 @@ special_projects = {
 	}
 }
 
+Sleepy_decision = {
+	icon = generic_prospect_for_resources
+	priority = 10
+}
+
 governments_in_exile = {
 	
 	icon = generic_formable_nations
